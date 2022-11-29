@@ -1,6 +1,6 @@
 SELECT
-    e.FirstName,
-    e.LastName,
+    e.FirstName AgentFirstName,
+    e.LastName AgentLastName,
     i.InvoiceId
 FROM Employee e
 JOIN Customer c
