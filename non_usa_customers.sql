@@ -1,5 +1,4 @@
 SELECT
-    c.id,
     c.FirstName,
     c.LastName,
     i.InvoiceId,
@@ -7,5 +6,5 @@ SELECT
     i.BillingCountry
 FROM Customer c
 JOIN Invoice i
-    ON i.CustomerId = c.id
+    ON i.CustomerId = c.CustomerId
 WHERE c.Country ="Brazil"
