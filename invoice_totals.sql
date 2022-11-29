@@ -1,10 +1,8 @@
 SELECT
-    c.FirstName CustomerFirstName,
-    c.LastName CustomerLastName,
+    i.Total InvoiceTotal,
+    c.FirstName || ' ' || c.LastName CustomerFullName,
     c.Country,
-    e.FirstName AgentFirstName,
-    e.LastName AgentLastName,
-    i.Total InvoiceTotal
+    e.FirstName || ' ' || e.LastName AgentFullName
 FROM Invoice i
 JOIN Customer c
     ON c.CustomerId = i.CustomerId

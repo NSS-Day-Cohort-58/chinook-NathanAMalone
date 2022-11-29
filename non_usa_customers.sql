@@ -1,10 +1,6 @@
 SELECT
-    c.FirstName,
-    c.LastName,
-    i.InvoiceId,
-    i.InvoiceDate,
-    i.BillingCountry
+    c.FirstName || ' ' || c.LastName CustomerFullName,
+    c.CustomerId,
+    c.Country
 FROM Customer c
-JOIN Invoice i
-    ON i.CustomerId = c.CustomerId
-WHERE c.Country ="Brazil"
+WHERE c.Country !="USA"
