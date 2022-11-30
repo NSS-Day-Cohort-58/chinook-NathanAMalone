@@ -1,6 +1,5 @@
 SELECT
-    c.FirstName,
-    c.LastName,
+    c.FirstName || ' ' || c.LastName CustomerFullName,
     c.CustomerId,
     c.Country
 FROM Customer c
